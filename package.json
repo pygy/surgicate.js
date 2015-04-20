@@ -1,0 +1,10 @@
+{
+    "name": "surgicate",
+    "version": "0.0.1",
+    "scripts": {
+        "test": ""
+    },
+    "main": "surgicate.js",
+    "devDependencies": {
+    }
+}

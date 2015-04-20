@@ -7,7 +7,7 @@ module.exports = function surgicate(options) {
 function Surgicate(options) {
     this.source = options.source;
     if (options.path) {
-        this.source = fs.readFileSync(options.path);
+        this.source = fs.readFileSync(options.path).toString();
         this.path = options.path;
     } else {
         this.path = this.source.slice(0, 20) +"...";
@@ -29,12 +29,12 @@ sp.graft = function(label, content) {
 };
 
 sp.excise = function(label) {
-    var parts = this.split("/*/-"+label+"-/*/");
+    var parts = this.source.split("/*/-"+label+"-/*/");
     if (parts.length % 2 != 1) {
         throw  "odd number of excision points in " + this.path;
     }
     var scar = "/*/+" + label + "+/*/"
-    for (var i = 2; i < parts.length; i+=2) parts[i] = scar;
+    for (var i = 1; i < parts.length; i+=2) parts[i] = scar;
     this.source = parts.join("");
     return this;
 };
@@ -57,3 +57,6 @@ function setify(ary) {
     ary.forEach(function(e){set[e]=true;});
     return set;
 }
+/*/-o-/*/
+//FOOO
+/*/-o-/*/

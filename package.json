@@ -1,10 +1,20 @@
 {
-    "name": "surgicate",
-    "version": "0.0.1",
-    "scripts": {
-        "test": ""
-    },
-    "main": "surgicate.js",
-    "devDependencies": {
-    }
+  "name": "surgicate",
+  "version": "0.0.2",
+  "scripts": {
+    "test": ""
+  },
+  "main": "surgicate.js",
+  "devDependencies": {},
+  "description": "JS source code surgery",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pygy/surgicate.js.git"
+  },
+  "author": "Pierre-Yves Gérardy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pygy/surgicate.js/issues"
+  },
+  "homepage": "https://github.com/pygy/surgicate.js"
 }
